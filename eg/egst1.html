@@ -1,0 +1,164 @@
+<!doctype html>
+<!--網站是英文-->
+<html lang="eg" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()"><!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+<head>
+
+<!--網站編碼-->
+	
+	<meta charset="utf-8">
+	<meta http-equiv="imagetoolbar" content="no"> 
+<!--網頁表頭-->
+	
+	<title>God's creation</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/APlayer.min.css" type="text/css">
+
+<!--javascript-->
+
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+<script type="text/javascript" src="../js/lh.js"></script><!--檢查瀏覽器高度改變大小-->
+<script src="../js/APlayer.min.js" type="text/javascript" > </script>
+</head>
+	
+<!--内容-->
+	
+<body onload="loadmusic(),lh(),setup()">
+
+<!--網頁表頭--> 
+	
+	<header>
+		<div class="top">
+		  <div id="branding">
+						<img src="../picture/201210041342124030731.png" width="1366" height="100" alt="heading" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+			<nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="eglogin.html" id="log">login</a></li>
+						<li><a href="egrg.html" id="reg_a">register</a></li>
+					</ul>
+				</div>
+			</nav>
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">user</a></li>
+						<li><a href="#" id="logout">logout</a></li>
+					</ul>
+				</div>
+			</nav>					
+<!--語言超鏈接-->
+			<nav class="other">
+				<ul>
+					<li><a href="../zh/home.html"	class="zh">繁體</a></li>
+					<li><a href="../zh-cn/zh-cnhome.html"	class="zh-cn">简体</a></li><br>
+					<li><a href="#"	class="eg">English</a></li>
+				</ul>		
+			</nav>
+		</div>	
+	</header>	
+
+<!--導覽列-->
+	
+<section>
+  <!--純文字-->
+  <div class="text">
+	<p><a href="egp.html">text version</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="#"><button class="vipbt">self-information</button></a></li>
+			<li><a href="eghome.html"><button class="button button1">index</button></a></li>
+				<li id="open"><a href="egst.html"><button class="button button2"><span>Bible Stories</span></button></a>
+					<div id="list">
+						<ul id="show"><!--定義#show為顯示框-->
+						<li><a href="egst1.html"><button class="button button2a">Story1</button></a></li>
+						<li><a href="egst2.html"><button class="button button2b">Story2</button></a></li>	
+						<li><a href="egst3.html"><button class="button button2c">Story3</button></a></li>
+						<!--需要的話可以繼續增加其他故事-->
+						</ul>
+					</div>
+				</li>
+				
+			<li><a href="egstt.html"><button class="button button3">Bible Stories Test</button></a></li>
+			<li><a href="egabu.html"><button class="button button4">About Us</button></a></li>
+			<li><a href="egrf.html"><button class="button button5">Reflect</button></a></li>
+			<li><a href="egfm.html"><button class="button button6">Forum</button></a></li>
+			<li><a href="egd.html"><button class="button button7">Disclaimer</button></a></li><br><br><br><br>
+
+			<!--需要的話可以增加-->
+	  	</ul>
+	</div>
+
+<!--關閉導覽列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+	<script>
+	$(".closebutton" ).click(function() {
+	$("#section").hide();
+	$(".closebutton").hide();
+	$(".text").hide();
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".openbutton").show();
+	$(".word").show(1000);
+	$(".photo").show(1000);
+	$(".photo").css("margin-right","0px");
+});
+	</script>
+<!--關閉導覽列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script>
+	$(".openbutton").click(function(){
+	$("#section").show();
+	$(".closebutton").show();
+	$(".text").show();
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+	$(".closebutton").show();
+	$(".openbutton").hide();
+	$(".photo").css("margin-right","0px");
+}); 
+	</script>
+</section>	
+	
+<!--内容框-->
+<nav class="content">
+	<!--故事框-->
+   	<div class="st">
+		<h1 align="center" id="tp" style="">God's creation</h1><br>
+		<iframe id="story" style="" align="middle" frameborder="0" height="100%" width="1000" src="../ifram框資源/timeline-eg.html"></iframe>
+
+	</div>
+	<!--故事的文字版本-->
+   	<div class="word" style="display: none;">
+		<iframe frameborder="0" height="" width="300" src="../ifram框資源/word-eg.html" id="word"></iframe>	
+	</div>
+	<!--圖片框-->
+   	<div class="photo"style="margin-right:5000px">
+		<iframe src="../ifram框資源/img.html" width="300" height="300" frameborder="0"></iframe> 
+		
+		
+	</div>
+</nav>
+    <div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+
+	<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+	
+</html>

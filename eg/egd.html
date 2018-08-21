@@ -1,0 +1,199 @@
+<!doctype html>
+<!--網站是英文-->
+<html lang="eg" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()"><!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+<head>
+
+<!--網站編碼-->
+	
+	<meta charset="utf-8">
+	<meta http-equiv="imagetoolbar" content="no"> 
+<!--網頁表頭-->
+	
+	<title>Disclaimer</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/APlayer.min.css">
+<!--javascript-->
+
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+<script src="../js/APlayer.min.js"></script>
+<script src="../js/copy.js"></script>		
+</head>
+	
+<!--内容-->
+	
+<body onload="loadmusic(),setup2();">
+<div class="frame1"></div>
+<!--網頁表頭--> 
+	
+	<header>
+		<div class="top">
+		  <div id="branding">
+						<img src="../picture/201210041342124030731.png" width="1366" height="100" alt="heading" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+			<nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="eglogin.html" id="log">login</a></li>
+						<li><a href="egrg.html" id="reg_a">register</a></li>
+					</ul>
+				</div>
+			</nav>
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">user</a></li>
+						<li><a href="#" id="logout">logout</a></li>
+					</ul>
+				</div>
+			</nav>					
+<!--語言超鏈接-->
+			<nav class="other">
+				<ul>
+					<li><a href="../zh/home.html"	class="zh">繁體</a></li>
+					<li><a href="../zh-cn/zh-cnhome.html"	class="zh-cn">简体</a></li><br>
+					<li><a href="#"	class="eg">English</a></li>
+				</ul>		
+			</nav>
+		</div>	
+	</header>	
+
+<!--導覽列-->
+	
+<section>
+  <!--純文字-->
+  <div class="text">
+	<p><a href="egp.html">text version</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="#"><button class="vipbt">self-information</button></a></li>
+			<li><a href="eghome.html"><button class="button button1">index</button></a></li>
+				<li id="open"><a href="egst.html"><button class="button button2"><span>Bible Stories</span></button></a>
+					<div id="list">
+						<ul id="show"><!--定義#show為顯示框-->
+						<li><a href="egst1.html"><button class="button button2a">Story1</button></a></li>
+						<li><a href="egst2.html"><button class="button button2b">Story2</button></a></li>	
+						<li><a href="egst3.html"><button class="button button2c">Story3</button></a></li>
+						<!--需要的話可以繼續增加其他故事-->
+						</ul>
+					</div>
+				</li>
+				
+			<li><a href="egstt.html"><button class="button button3">Bible Stories Test</button></a></li>
+			<li><a href="egabu.html"><button class="button button4">About Us</button></a></li>
+			<li><a href="egrf.html"><button class="button button5">Reflect</button></a></li>
+			<li><a href="egfm.html"><button class="button button6">Forum</button></a></li>
+			<li><a href="egd.html"><button class="button button7">Disclaimer</button></a></li><br><br><br><br>
+
+			<!--需要的話可以增加-->
+	  	</ul>
+	</div>
+
+<!--關閉導覽列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+	<script>
+	$(".closebutton" ).click(function() {
+	$("#section").hide();
+	$(".closebutton").hide();
+	$(".text").hide();
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".openbutton").show();
+});
+	</script>
+<!--關閉導覽列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script>
+	$(".openbutton").click(function(){
+	$("#section").show();
+	$(".closebutton").show();
+	$(".text").show();
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+	$(".closebutton").show();
+	$(".openbutton").hide();
+}); 
+	</script>
+</section>	
+	
+<!--Content box -->
+<nav class="content">
+<p>
+<ul id="ulst">
+<li id="smbt"><a>A</a></li>
+<li id="bgbt"><a>A</a></li>
+</ul>
+</p>
+	<script>
+	$("#bgbt").click(function(){
+	$(".size").css("font-size","6vw");
+	$(".tt").css("font-size","8vw");
+	$("#copy").css("font-size","8vw");
+	$(".frame1").addClass("frame2");
+	$(".frame1").removeClass("frame1");
+}); 
+	</script>
+	<script>
+	$("#smbt").click(function(){
+	$(".size").css("font-size","1.172vw");
+	$(".tt").css("font-size","2.5vw");
+	$("#copy").css("font-size","1.172vw");
+	$(".frame2").addClass("frame1");
+	$(".frame2").removeClass("frame2");
+}); 
+	</script>
+<p class="tt"style="font-size:2.5vw;text-align:center;">Disclaimer</p>
+   <p class="size link" style="font-size:1.172vw">
+1. All information, logos, images, short films, sound files, links and other materials (hereinafter referred to as the "Information") contained in this website are for reference only and will be subject to change at any time and will be determined by this website. Without further notice. Although this website has made every effort to ensure the accuracy of the information on this website, this website does not expressly or implicitly guarantee that such information is accurate. This website is not responsible for any errors or omissions. <br><br>
+2. This website does not incur any damages (including but not limited to computer viruses, system security, data loss) caused by the use or use of this website by anyone. This webpage may link to webpages provided by other organizations, but these webpages are not controlled by this website. The company does not guarantee or assume any responsibility for the content displayed on these pages. In addition, this website does not prompt you when you connect to a website other than this website. If you visit these pages, you will bear the consequences. <br><br>
+3. Regarding the use of cookies, in order to ensure the normal operation of the website, we sometimes store small data files called cookies on a computer or mobile device. A cookie is a plain text file that a web server stores on a computer or mobile device. Each cookie is unique to your web browser or mobile app. Cookies usually contain an identifier, a site name, and some numbers and characters. The contents of the cookies on this website will be stored on your computer or mobile device, including but not limited to account number, password, birthday, personal information. By using this website, the representative agrees to store the cookie on your computer or mobile device. This website does not accept any loss of data leakage caused by any use of this website, including but not limited to computer virus intrusion. Compensation. <br><br>
+4. This website reserves the right to update this disclaimer at any time with or without prior notice. Any changes will be effective immediately upon posting on this website. Please be sure to review this disclaimer each time you visit this website. By continuing to use this website, you agree to be bound by the disclaimer after the change. <br><br>
+5. Copyright, all content on this website is not determined to be owned by this website, but any unauthorized use of the material may be infringing. Visitors are not allowed to change, reproduce, store in selectable systems, transfer (whether in any form or by any means), copy, distribute, distribute through any channel, use as derivative works, use in any other form or process For any purpose. If you are the copyright holder of the content of this website, please email <a href="mailto:s13027@slc.edu.hk">s13027@slc.edu.hk</a> to inform this website deal with. <a target="_blank" href="https://www.elegislation.gov.hk/hk/cap528!zh-Hant-HK">Copyright Ordinance</a><br><br>
+6. The copyright of the film, the film of this website is the creation of the creator of this website. The copyright of the film is owned by the owner of the website. Any user who is not authorized by the website may not commit any infringement (including but not limited to storage in an optional system, transfer (in any form or by any means), distribution, through any Channel release), unauthorized use of the material is an infringement. This website reserves the right to legal action. Users who need to use the videos on this website should email <a href="mailto:s13027@slc.edu.hk">s13027@slc.edu.hk</a> to communicate with the holders of this website. <br><br>
+7. Music copyright, the music part of this website is the audio of <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">cc0</a>. Some of the music on this website is copyright-free, and users can freely overwrite, modify, distribute, and perform this work, even for commercial purposes, without requiring consent. <br><br>
+8. Background image copyright, the background pattern of this website is the agreement of CC BY-SA 3.0. This site requires the attribution of the producer of the image and the connection to <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">this license agreement</a>. In addition, the background image used on this website has not been modified. The creator of the background image used on this website is <a target="_blank" href="http://www.toripantha.com">Tori Pantha</a>. <br><br>
+9. The use of music player copyright, the music player used on this website is Aplayer. APlayer is an open source project licensed from MIT and is completely free to use. Without the proper financial support, the amount of work required to maintain and develop new features of the project is not sustainable. You can subsidize the player at <a href="https://www.paypal.me/DIYgod" rel="nofollow" target="_blank">Paypal</a>, <a href="https ://i.imgur.com/aq6PtWa.png" rel="nofollow" target="_blank">WeChat Pay</a>, <a href="https://i.imgur.com/wv1Pj2k.png" Rel="nofollow"target="_blank">Alipay</a>,
+<input id="copytxt" value="13CwQLHzPYm2tewNMSJBeArbbRM5NSmCD1" style="position:absolute;right:10000px;">Bitcoin: 13CwQLHzPYm2tewNMSJBeArbbRM5NSmCD1<button id="copy" data-clipboard-target="#copytxt" style=" background- Color: white; color: black;
+Border: 0.5px solid black;">Copy bitcoin address</button>. The following is Aplayer's <a href="../LICENSE" target="_blank">copyright notice</a>. Open source URL: <a href = "https://github.com/MoePlayer/APlayer" target = "_ blank"> Github </a> author: <a href="https://diygod.me"target="_blank"> author's website </a><br><br>
+10. The use of the copyright of the video player, the music player used on this website is Dplayer. DPlayer is an open source project licensed from MIT and is completely free to use. Without the proper financial support, the amount of work required to maintain and develop new features of the project is not sustainable. You can subsidize the player at <a href="https://www.paypal.me/DIYgod" rel="nofollow" target="_blank">Paypal</a>, <a href="https ://i.imgur.com/aq6PtWa.png" rel="nofollow"target="_blank">WeChat Pay</a>, <a href="https://i.imgur.com/wv1Pj2k.png" Rel="nofollow" target="_blank">Alipay</a>,
+Bitcoin: 13CwQLHzPYm2tewNMSJBeArbbRM5NSmC1. The following is Dplayer's <a href="../LICENSE" target="_blank">copyright notice</a>. Open Source Website: <a href="https://github.com/MoePlayer/DPlayer" target="_blank"> Github </a> Author: <a href = "https://diygod.me" target = "_blank ">Author website</a><br><br>
+11. Refer to the use of Website Copyright 1, which refers to the content of <a href="https://diygod.me/"target="_blank">https://diygod.me/</a> and from Get music and more from the site's <a href="https://api.i-meto.com/meting/api?server=netease"target="_blank">api interface</a>. The website of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"target="_blank">CC BY-NC-SA 4.0</a> agreement, this website Need to be signed, non-commercial, and shared in the same way. On this website is DIYgod, open-source Web site: <a href="https://github.com/DIYgod/diygod.me" target="_blank"> Github </a> Author: <a href = "https: / /diygod.me"target="_blank">Author Website</a><br><br>
+12. Refer to the use of Website Copyright 2 for this website. Refer to the <a href="https://www.html5tricks.com/"target="_blank">https://www.html5tricks.com/</a> example. And made changes. This site is open source at <a href="https://github.com/andygoo/html5tricks"target="_blank">https://github.com/andygoo/html5tricks</a>. This website is open source but does not indicate which agreement it is subject to. This website will briefly explain the source of the information on its website. The author of the reference website is andygoo, which uses and references the examples and makes minor modifications. <br><br>
+13. About the use of jQuery. jQuery is a fast, small, feature-rich JavaScript library. It runs in a large number of browsers through an easy-to-use API, making HTML document traversal and manipulation, event handling, animation and Ajax easier. Through a combination of versatility and extensibility, jQuery has changed the way millions of people write JavaScript. <a href="https://github.com/jquery/jquery"target="_blank">Github</a>-----<a href="../LICENSE2"target="_blank">Copyright Statement</a><br><br>
+14. About the use of clipboard.js. Copying the text to the clipboard should not be difficult. It does not require dozens of steps to configure or load hundreds of KB. But most importantly, it should not depend on Flash or any inflated framework. This is why clipboard.js exists. <a href="https://github.com/zenorocha/clipboard.js"target="_blank">Github</a><br><br>
+15. This disclaimer is governed by the laws of the Hong Kong Special Administrative Region and is interpreted in accordance with the laws of the Hong Kong Special Administrative Region. You agree to be subject to the jurisdiction of the non-exclusive jurisdiction of the courts of the Hong Kong Special Administrative Region. <a target="_blank"href="http://www.basiclaw.gov.hk/tc/basiclawtext/index.html">Basic Law</a><br><br>
+16. The Internet has now penetrated into every aspect of daily life, allowing us to access the latest information and services anytime, anywhere, and to connect with friends. The use of barrier-free websites and mobile applications not only facilitates everyone (including people with disabilities), but also facilitates business and helps build a harmonious and inclusive society. This website provides some accessibility features, but the website is not perfect and some features are not available. I hope that the users can forgive me. <br><br>
+17. The use and browsing of the contents of this website is subject to the content of all the contents of this disclaimer and may not be objected. <br><br>
+In case of discrepancies between the Chinese and English versions, the Chinese version shall prevail. <br class="tpbr"><br><br><br><br><br></p>
+<script>new Clipboard( "#copy" );</script>
+</nav>
+<button onclick="topFunction()" id="myBtn" title="Go to top">╱╲</button>
+<button onclick="topFunction1()" id="myBtn1" title="Go to bottom">╲╱</button>
+<script>
+$("#copy").click(function(){
+if(window.localStorage)
+{alert("Copied to clipboard\n已複製到剪貼板\n已複製到剪贴板")}
+else{alert("Copy error\n複製錯誤");};
+}); 
+</script>
+	<div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+	<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+	
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()">
+<head>
+<meta charset="utf-8" />
+<title>img框</title>
+
+<link rel="stylesheet" href="../css/img.css">
+<!--css-->
+<style>
+body{margin: 0;}
+.list {width: 300px;height: 300px;font-size: 40px;text-align: center;background-color: black;}
+.carousel-item{line-height: 336px;color: #fff;font-family:  Arial Black}
+</style>
+
+</head>
+<body>
+<!--顯示框-->
+<div class="list">
+	<div class="ft-carousel" id="image">
+		<ul class="carousel-inner">
+			<li class="carousel-item"><iframe src="clock.html" width="300" height="255" frameborder="0" marginheight="0" marginwidth="25">時鐘</iframe></li>
+			<li class="carousel-item"><img src="../picture/p1.jpg" alt="耶穌Jesus"></img></li>
+			<li class="carousel-item"><img src="../picture/p2.jpg" alt="耶穌誕生耶稣诞生Birth of Jesus"></li>
+			<li class="carousel-item"><img src="../picture/p3.jpg" alt="教堂church"></li>
+			<li class="carousel-item"><img src="../picture/p4.jpg" alt="耶穌Jesus"></li>
+			<li class="carousel-item"><img src="../picture/p5.jpg" alt="耶穌受難耶稣受难Jesus Crucifixion"></li>
+			<li class="carousel-item"><img src="../picture/p6.jpg" alt="耶穌受難耶稣受难Jesus Crucifixion"></li>
+			<li class="carousel-item"><img src="../picture/p7.jpg" alt="耶穌升天Ascension of Jesus "></li>
+			<li class="carousel-item"><img src="../picture/p8.jpg" alt="耶穌受難耶稣受难Jesus Crucifixion"></li>
+			<li class="carousel-item"><img src="../picture/p9.jpg" alt="耶穌Jesus"></li>
+			<li class="carousel-item"><img src="../picture/p10.jpg" alt="最後的晚餐最后的晚餐Last Supper "></li>
+			<li class="carousel-item"><img src="../picture/p11.jpg" alt="耶穌受難耶稣受难Jesus Crucifixion"></li>
+			<li class="carousel-item"><img src="../picture/p12.jpg" alt="苦路Via Dolorosa"></li>
+		</ul>
+	</div>
+</div>
+<!--jq-->
+<script src="../js/jquery-3.3.1.min.js.js"></script>
+<!--滑動js-->
+<script src="../js/img.min.js"></script>
+<!--js滑動-->
+<script type="text/javascript">
+	$("#image").FtCarousel({
+		auto: true,
+		time: 3000,/*多少微秒*/
+		/*auto: false,不滑動*/
+		/*time: 10000,*//*滑動時間*/
+	});
+</script>
+</body>
+</html>

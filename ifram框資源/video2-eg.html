@@ -1,0 +1,26 @@
+<!doctype html>
+<html oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()">
+		<meta charset="utf-8">
+<head>
+
+<link rel="stylesheet" href="../css/DPlayer.min.css">
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script>
+<script src="../js/DPlayer.min.js"></script>
+</head>
+<body>
+	<div id="dplayer"><video src="../video/video2.mp4" controls style="width: 750px;padding-left:25px;"></video><p style="padding-left:25px;"> The browser can't execute DPlayer, use other browsers to get a better experience!</p></div>
+	<script >
+	const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+	mutex: true,
+	lang: 'eg',
+	hotkey: true,
+	preload: 'auto',
+    video: {
+        url: '../video/video2.mp4',
+    },
+
+});
+</script>
+</body>
+</html>

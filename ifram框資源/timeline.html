@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!--css-->
+<link rel="stylesheet" href="../css/timeline.css">
+</head>
+<body>
+
+<!--html-->
+<div id="timeLine" style="
+    margin: 0px;
+    margin-top: 0px;
+">
+<ul id="yearList">
+	<li class="year-active">第1天<i class="year-dot"></i></li>
+	<li>第2天<i class="year-dot"></i></li>
+	<li>第3天<i class="year-dot"></i></li>
+	<li>第4天<i class="year-dot"></i></li>
+	<li>第5天<i class="year-dot"></i></li>
+	<li>第6天<i class="year-dot"></i></li>
+	<li>第7天<i class="year-dot"></i></li>
+</ul>
+<div class="dotted-line"></div>
+
+<div id="cList">
+	<a href="#" id="btnLeft">&lt;</a>
+	<div style="width: 850px;margin: 0 auto; overflow: hidden">
+		<ul id="cUl">
+			<li>
+				<span class="li-tit">第1天</span>
+				<div class="container-li">
+						<iframe src="video1.html" width="850" height="504" frameborder="0" marginwidth="25"  allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"webkitallowfullscreen="webkitallowfullscreen"></iframe>
+				<div class="c-li">
+							
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第2天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video2.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第3天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video3.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第4天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video4.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第5天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video5.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第6天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video6.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+			<li>
+				<span class="li-tit">第7天</span>
+				<div class="container-li">
+					<div class="c-li">
+						<iframe src="video7.html" width="850" height="504" frameborder="0" marginwidth="25"></iframe>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<a href="#" id="btnRight">&gt;</a>
+</div>
+</div>
+
+
+
+<!--js-->
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-timeLine.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#timeLine").timeLine({
+		w:850  //每一个li的宽度
+//            btnPrev:"#btnLeft",      //上一个按钮
+//            btnNext: "#btnRight",  //下一个按钮
+//            dateBox:"#yearList", //日期的ul盒子
+//            dateArr: "#yearList li", //保存每一个日期的数组
+//            conBox:"#cUl",  //保存切换内容的ul盒子
+//            conArr:"#cUl li" //保存每一个内容的数
+	});
+});
+</script>
+
+</div>
+
+</body>
+</html>

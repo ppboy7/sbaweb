@@ -1,0 +1,172 @@
+<!doctype html>
+<!--網站是繁體-->
+<html lang="zh-Hant" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()"><!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+
+<head>
+
+<!--網站編碼-->
+	
+	<meta charset="utf-8">	
+	<meta http-equiv="imagetoolbar" content="no"> 
+<!--網頁表頭-->
+	
+	<title>討論區</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css"><!--連接防止修改-->
+<link rel="stylesheet" href="../css/APlayer.min.css">
+	
+<!--javascript-->
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+
+<script src="../js/APlayer.min.js"></script>		
+</head>
+
+<!--内容-->
+	
+<body onload="loadmusic(),setup2();">
+<div class="frame1"></div>
+<!--網頁表頭--> 
+	<header>
+	    <div class="top">
+		  <div id="branding">
+			<img src="../picture/201210041342124030731.png" height="100" alt="表頭圖片如果無法顯示請下載使用google chrome" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+	    <nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="login.html" id="log">登入</a></li>
+						<li><a href="rg.html" id="reg_a">註冊</a></li>
+					</ul>
+				</div>
+			</nav>	
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">用戶</a></li>
+						<li><a href="#" id="logout">登出</a></li>
+					</ul>
+				</div>
+			</nav>			
+<!--語言超鏈接-->
+		  <nav class="other">
+			  <ul>
+				  <li><a href="#"	class="zh">繁體</a></li>
+				  <li><a href="../zh-cn/zh-cnhome.html"	class="zh-cn">简体</a></li><br>
+				  <li><a href="../eg/eghome.html"	class="eg">English</a></li>
+				  <!--可以增加其他語言但要改css調位置-->
+			  </ul>		
+		  </nav>
+
+		</div>	
+	</header>	
+
+<!--導覽列-->
+	
+<section>
+<!--純文字-->
+  <div class="text">
+	<p><a href="p.html">純文字版</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="vip.html"><button class="vipbt">個人資料</button></a></li>
+			<li><a href="home.html"><button class="button button1">首頁</button></a></li>
+			<li id="open"><a href="st.html"><button class="button button2"><span>聖經故事</span></button></a>
+				<div id="list">
+					<ul id="show"><!--定義#show為顯示框-->
+					<li><a href="st1.html"><button class="button button2a">故事一</button></a></li>
+					<li><a href="st2.html"><button class="button button2b">故事二</button></a></li>	
+					<li><a href="st3.html"><button class="button button2c">故事三</button></a></li>
+					<!--需要的話可以繼續增加其他故事-->
+					</ul>
+				</div>
+			</li>
+				
+			<li><a href="stt.html"><button class="button button3">聖經故事測驗</button></a></li>
+			<li><a href="abu.html"><button class="button button4">關於我們</button></a></li>
+			<li><a href="rf.html"><button class="button button5">回應區</button></a></li>
+			<li><a href="fm.html"><button class="button button6">討論區</button></a></li>
+		  	<li><a href="d.html"><button class="button button7">免責聲明</button></a></li><br><br><br><br>
+
+			<!--需要的話可以增加-->
+	  	</ul>
+	</div>
+<!--關閉導覽列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".closebutton" ).click(function() {
+	$("#section").hide(1000);
+	$(".closebutton").hide(1000);
+	$(".text").hide(1000);
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".openbutton").show(1000);
+});
+	</script>
+<!--打開導覽列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".openbutton").click(function(){
+	$("#section").show(1000);
+	$(".closebutton").show(100);
+	$(".text").show(1000);
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+	$(".closebutton").show(1000);
+	$(".openbutton").hide(1000);
+}); 
+	</script>
+</section>
+	
+<!--内容框-->
+	<nav class="content">
+		<h1 style="font-size:30px">討論區</h1><br>		
+		<div class="fmf1"><span class="fmname"><span class="rainbow">作者:PPboy7</span><sup class="admin">♛網站擁有者</sup></span>
+		<p class="fmtxt1">在這裏可以寫下討論的内容<br>以下為可以添加的字型樣式&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>注意!!! 請勿填寫以下以外的hmtl碼</b><br>以&lt;b&gt;&lt;/b&gt;包著可以粗體<b>例子</b><br>以&lt;i&gt;&lt;/i&gt;包著可以斜體<i>例子</i><br>以&lt;u&gt;&lt;/u&gt;包著可以下劃線<u>例子</u><br>以&lt;a&nbsphref="連接的網址"&gt;&lt;/a&gt;包著可以增加連結<a href="https://github.com/ppboy7" target="_blank">例子</a><br>連接網站必須以http://開頭，使用target="_blank"可以以新分頁打開<br>打上&lt;br&gt;可以隔行<br></p></div><br>
+		<div class="fm"><div class="fmf1"><span class="fmname"><span class="rainbow">作者:PPboy7</span><sup class="admin">♛網站擁有者</sup></span><p class="fmtxt1">注意内容最多可以打8行多於8行會不作顯示,每行為51個中文字/94個數字/87個英文字<br>中文字超出51個字會自動換行，英文跟數字則不會請自行隔行</p></div><br></div>
+		<div class="inputfmf"><span class="nametag">用戶名字：</span><input class="inputfmname" id="inputfmname" type="text" name="inputfmname" value="匿名"></input><textarea class="inputtxt" id="inputtxt"style="width:680px;height:150px;" placeholder="輸入你想要寫的內容..."></textarea><button class="inputbt">送出</button><input class="resetbt"type="button" value="重置" onclick="reset();"></div><br><br><br>
+<script>
+$(".inputbt").click(fmft);
+function fmft(){
+var txt1 = $(".inputfmname").val();
+var txt2 = $(".inputtxt").val();
+var a=$(".fmf>").length;
+var b = (a/2+1);
+var tag = "<div class=\"fmf\"><span class=\"fmname\">作者 :"+txt1+"&nbsp&nbsp編號:"+b+"</span><p class=\"fmtxt\">"+txt2+"</p></div><br></div>";
+$(".fm").after(tag);
+$('html,body').animate({scrollTop:$('.inputfmf').offset().top},100);
+}
+</script>
+		
+		
+	<script>
+window.addEventListener("beforeunload", function (event) {
+  // Most browsers.
+  event.preventDefault();
+
+  // Chrome/Chromium based browsers still need this one.
+  event.returnValue = "\o/";
+});</script>
+<button onclick="topFunction()" id="myBtn" title="Go to top">╱╲</button>
+<button onclick="topFunction1()" id="myBtn1" title="Go to bottom">╲╱</button>
+	</nav>
+	<div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+	<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+	
+</html>

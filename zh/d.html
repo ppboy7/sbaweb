@@ -1,0 +1,202 @@
+<!doctype html>
+<!--網站是繁體-->
+<html lang="zh-Hant" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" ＆#111nmouseup="document.selection.empty()"><!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+
+<head>
+
+<!--網站編碼-->
+	
+	<meta charset="utf-8">	
+	<meta http-equiv="imagetoolbar" content="no"> 
+<!--網頁表頭-->
+	
+	<title>免責聲明</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css"><!--連接防止修改-->
+<link rel="stylesheet" href="../css/APlayer.min.css">
+	
+<!--javascript-->
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+<script src="../js/copy.js"></script>		
+<script src="../js/APlayer.min.js"></script>		
+</head>
+
+<!--内容-->
+	
+<body onload="loadmusic(),setup2();">
+<div class="frame1"></div>
+<!--網頁表頭--> 
+	<header>
+	    <div class="top">
+		  <div id="branding">
+			<img src="../picture/201210041342124030731.png" height="100" alt="表頭圖片如果無法顯示請下載使用google chrome" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+	    <nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="login.html" id="log">登入</a></li>
+						<li><a href="rg.html" id="reg_a">註冊</a></li>
+					</ul>
+				</div>
+			</nav>	
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">用戶</a></li>
+						<li><a href="#" id="logout">登出</a></li>
+					</ul>
+				</div>
+			</nav>			
+<!--語言超鏈接-->
+		  <nav class="other">
+			  <ul>
+				  <li><a href="#"	class="zh">繁體</a></li>
+				  <li><a href="../zh-cn/zh-cnhome.html"	class="zh-cn">简体</a></li><br>
+				  <li><a href="../eg/eghome.html"	class="eg">English</a></li>
+				  <!--可以增加其他語言但要改css調位置-->
+			  </ul>		
+		  </nav>
+
+		</div>	
+	</header>	
+
+<!--導覽列-->
+	
+<section>
+<!--純文字-->
+  <div class="text">
+	<p><a href="p.html">純文字版</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="vip.html"><button class="vipbt">個人資料</button></a></li>
+			<li><a href="home.html"><button class="button button1">首頁</button></a></li>
+			<li id="open"><a href="st.html"><button class="button button2"><span>聖經故事</span></button></a>
+				<div id="list">
+					<ul id="show"><!--定義#show為顯示框-->
+					<li><a href="st1.html"><button class="button button2a">故事一</button></a></li>
+					<li><a href="st2.html"><button class="button button2b">故事二</button></a></li>	
+					<li><a href="st3.html"><button class="button button2c">故事三</button></a></li>
+					<!--需要的話可以繼續增加其他故事-->
+					</ul>
+				</div>
+			</li>
+				
+			<li><a href="stt.html"><button class="button button3">聖經故事測驗</button></a></li>
+			<li><a href="abu.html"><button class="button button4">關於我們</button></a></li>
+			<li><a href="rf.html"><button class="button button5">回應區</button></a></li>
+			<li><a href="fm.html"><button class="button button6">討論區</button></a></li>
+		  	<li><a href="d.html"><button class="button button7">免責聲明</button></a></li>
+			
+
+			<!--需要的話可以增加-->
+	  	</ul>
+	</div>
+<!--關閉導覽列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".closebutton" ).click(function() {
+	$("#section").hide(1000);
+	$(".closebutton").hide(1000);
+	$(".text").hide(1000);
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".openbutton").show(1000);
+});
+	</script>
+<!--打開導覽列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".openbutton").click(function(){
+	$("#section").show(1000);
+	$(".closebutton").show(100);
+	$(".text").show(1000);
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+	$(".closebutton").show(1000);
+	$(".openbutton").hide(1000);
+}); 
+	</script>
+</section>
+	
+<!--內容框-->
+<nav class="content">
+<p>
+	<ul id="ulst">
+		<li id="smbt"><a>A</a></li>
+		<li id="bgbt"><a>A</a></li>
+	</ul>		  
+</p>
+	<script>
+	$("#bgbt").click(function(){
+	$(".size").css("font-size","6vw");
+	$(".tt").css("font-size","8vw");
+	$("#copy").css("font-size","8vw");
+	$(".frame1").addClass("frame3");
+	$(".frame1").removeClass("frame1");
+}); 
+	</script>
+	<script>
+	$("#smbt").click(function(){
+	$(".size").css("font-size","1.172vw");
+	$(".tt").css("font-size","2.5vw");
+	$("#copy").css("font-size","1.172vw");
+	$(".frame3").addClass("frame1");
+	$(".frame3").removeClass("frame3");
+}); 
+	</script>
+<p class="tt"style="font-size:2.5vw;text-align:center;">免責聲明</p>
+   	  <p class="size link" style="font-size:1.172vw">
+	  1.本網頁所載的所有資料、標誌、圖像、短片、聲音檔案、連結及其他資料等（以下簡稱「資料」），只供參考之用，資料將會隨時更改資料，並由本網站決定而不作另行通知。雖然本網站已盡力確保本網頁的資料準確性，但本網站不會明示或隱含保證該等資料均為準確無誤。本網站不會對任何錯誤或遺漏承擔責任。<br><br>
+	  2.本網站不會對使用或任何人士使用本網頁而引致任何損害（包括但不限於電腦病毒、系統固障、資料損失）承擔任何賠償。本網頁可能會連結至其他機構所提供的網頁，但這些網頁並不由本網站所控制。本公司不會對這些網頁所顯示的內容作出任何保證或承擔任何責任。此外，本網站連接至非本網站之網站時不作提示，閣下如瀏覽這些網頁造成之損失，將要自己承擔後果。<br><br>
+	  3.關於 Cookies 的使用，為確保網站正常運轉，我們有時會在計算機或移動設備上存儲名為 Cookie 的小數據文件。Cookie 是一種網絡服務器存儲在計算機或移動設備上的純文本文件。每個 Cookie 對您的網絡瀏覽器或移動應用程序都是唯一的。Cookie 通常包含標識符、站點名稱以及一些號碼和字符。本網站之Cookies內容將會儲存於您的計算機或移動設備上，內容包括但不限於賬號、密碼、生日、個人信息。使用本網站代表同意把cookie存儲於您的計算機或移動設備，本網站不會對使用或任何人士使用本網頁而引致任何（包括但不限於電腦病毒入侵）所導致的資料外泄之損失承擔任何賠償。<br><br>
+	  4.在給予或不給予事先通知下，本網站保留隨時更新本免責聲明的權利，任何更改於本網站發佈時，立即生效。請閣下在每次瀏覽本網站時，務必查看此免責聲明。如閣下繼續使用本網站，即代表閣下同意接受更改後的免責聲明約束。<br><br>
+	  5.版權，本網站之所有內容並不確定為本網站之所有，但任何未經授權使用的資料可能屬侵權行為。瀏覽者請勿更改、重造、儲存於可選取系統、轉移（不論以任何形式或任何方式）、仿製、分銷、透過任何渠道發佈、利用以作衍生作品、以其他任何形式使用或處理以達致任何目的。若您為本網站內容中的版權持有人，請電郵至<a href="mailto:s13027@slc.edu.hk">s13027@slc.edu.hk</a>，以通知本網站作後續處理。<a target="_blank" href="https://www.elegislation.gov.hk/hk/cap528!zh-Hant-HK">《版權條例》</a><br><br>
+	  6.影片版權，本網站之影片皆為本網站之創作者之創作。影片版權全歸網站持有人之所有，非獲得網站授權之使用者皆不可做出侵權行爲（包括但不限於儲存於可選取系統、轉移（不論以任何形式或任何方式）、分銷、透過任何渠道發佈），在未經授權使用的資料均屬侵權行為。本網站保留法律起訴之權利。需要使用本網站之影片之使用者請電郵至<a href="mailto:s13027@slc.edu.hk">s13027@slc.edu.hk</a>與本網站之持有人溝通。<br><br>
+	  7.音樂版權，本網站部分之音樂為<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">cc0</a>之音頻。本網站之部分音樂為沒有版權，使用者可以隨意覆制、修改、發行和表演本作品，甚至可用於商業性目的，都無需要求同意。<br><br>
+	  8.背景圖片版權，本網站之背景圖案為CC BY-SA 3.0之協議。本網站需要指出圖片之製作人的署名，同時需要連接<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">本許可協議</a>。此外本網站使用之背景圖片沒有經過任何修改。本網站使用背景圖片之創作人為<a target="_blank" href="http://www.toripantha.com">Tori Pantha</a>。<br><br>
+	  9.音樂播放器版權之使用，本網站所使用的音樂播放器為Aplayer。APlayer是MIT許可的開源項目，完全免費使用。如果沒有適當的資金支持，維持和開發項目新功能所需的工作量是不可持續的。您可以到以下位置對播放器提供補助<a href="https://www.paypal.me/DIYgod" rel="nofollow" target="_blank">Paypal</a>、<a href="https://i.imgur.com/aq6PtWa.png" rel="nofollow" target="_blank">WeChat Pay</a>、<a href="https://i.imgur.com/wv1Pj2k.png" rel="nofollow"target="_blank">Alipay</a>、
+	  <input id="copytxt" value="13CwQLHzPYm2tewNMSJBeArbbRM5NSmCD1" style="position:absolute;right:10000px;">Bitcoin: 13CwQLHzPYm2tewNMSJBeArbbRM5NSmCD1<button id="copy" data-clipboard-target="#copytxt" style="	background-color: white;     color: black; 
+	   border: 0.5px solid black;">複製bitcoin地址</button>。以下為Aplayer之<a href="../LICENSE" target="_blank">版權聲明</a>。開源網址:<a href="https://github.com/MoePlayer/APlayer" target="_blank">Github</a>作者:<a href="https://diygod.me"target="_blank">作者網站</a><br><br>
+	  10.影片播放器版權之使用，本網站所使用的音樂播放器為Dplayer。DPlayer是MIT許可的開源項目，完全免費使用。如果沒有適當的資金支持，維持和開發項目新功能所需的工作量是不可持續的。您可以到以下位置對播放器提供補助<a href="https://www.paypal.me/DIYgod" rel="nofollow" target="_blank">Paypal</a>、<a href="https://i.imgur.com/aq6PtWa.png" rel="nofollow"target="_blank">WeChat Pay</a>、<a href="https://i.imgur.com/wv1Pj2k.png" rel="nofollow" target="_blank">Alipay</a>、
+	  Bitcoin: 13CwQLHzPYm2tewNMSJBeArbbRM5NSmC1。以下為Dplayer之<a href="../LICENSE" target="_blank">版權聲明</a>。開源網址:<a href="https://github.com/MoePlayer/DPlayer" target="_blank">Github</a>作者:<a href="https://diygod.me"target="_blank">作者網站</a><br><br>
+	  11.參考網站版權1之使用，本網站參考<a href="https://diygod.me/"target="_blank">https://diygod.me/</a>之內容，以及從其網站之<a href="https://api.i-meto.com/meting/api?server=netease"target="_blank">api接口</a>獲得音樂以及其他內容。其網站為<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"target="_blank">CC BY-NC-SA 4.0</a>協議之網站，本網站需要署名、非商業性使用、相同方式共享。此網站之作者為DIYgod，開源網址:<a href="https://github.com/DIYgod/diygod.me" target="_blank">Github</a>作者:<a href="https://diygod.me"target="_blank">作者網站</a><br><br>
+	  12.參考網站版權2之使用，本網站參考<a href="https://www.html5tricks.com/"target="_blank">https://www.html5tricks.com/</a>之範例並作出修改。此網站開源於<a href="https://github.com/andygoo/html5tricks"target="_blank">https://github.com/andygoo/html5tricks</a>。此網站為開源但並沒有指出是遵從於哪個協議，本網站將簡略説明其網站資料的來源。參考網站之作者為andygoo，本網站使用與參考其範例並作出微量修改。<br><br>
+	  13.關於jQuery之使用。jQuery是一個快速，小巧，功能豐富的JavaScript庫。它通過易於使用的API在大量瀏覽器中運行，使得HTML文檔遍歷和操作，事件處理，動畫和Ajax更加簡單。通過多功能性和可擴展性的結合，jQuery改變了數百萬人編寫JavaScript的方式。<a href="https://github.com/jquery/jquery"target="_blank">Github</a>-----<a href="../LICENSE2"target="_blank">版權聲明</a><br><br>
+	  14.關於clipboard.js之使用。將文本複製到剪貼板應該不難。它不需要數十個步驟來配置或加載數百KB。但最重要的是，它不應該依賴於Flash或任何膨脹的框架。這就是clipboard.js存在的原因。<a href="https://github.com/zenorocha/clipboard.js"target="_blank">Github</a><br><br>
+	  15.本免責聲明受香港特別行政區法律約束及按照香港特別行政區法律進行詮釋。閣下同意接受香港特別行政區法院非專有審判權的管轄。<a target="_blank"href="http://www.basiclaw.gov.hk/tc/basiclawtext/index.html">《基本法》</a><br><br>
+	  16.互聯網現已滲入日常生活各個層面，讓我們可隨時隨地獲取最新的資訊及服務，並與友儕聯繫。採用無障礙設計的網站及流動應用程式，不僅方便所有人(包括殘疾人士)，還有利營商，有助建立和諧共融的社會。本網站提供部分無障礙功能，但網站並非完善，部分功能無法提供，希望有關使用人士可以見諒。<br><br>
+	  17.使用、瀏覽本網站之內容為同意本免責聲明之一切之所有內容之約束，不得作出異議。<br><br>
+		若中英文版本有差異之處，以中文版本為準。<br class="tpbr"><br><br><br><br><br></p>
+	
+	<script>new Clipboard( "#copy" );</script>
+</nav>
+<button onclick="topFunction()" id="myBtn" title="Go to top">╱╲</button>
+<button onclick="topFunction1()" id="myBtn1" title="Go to bottom">╲╱</button>
+<script>
+$("#copy").click(function(){
+if(window.localStorage)
+{alert("Copied to clipboard\n已複製到剪貼板\n已複製到剪贴板")}
+else{alert("Copy error\n複製錯誤");};
+}); 
+</script>
+	<div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+	<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+<div class="layle"></div>	
+</html>

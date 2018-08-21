@@ -1,0 +1,211 @@
+<!doctype html>
+<!--網站是簡體-->
+<html lang="zh-Hans" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()"> <!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+
+<head>
+<!--網站編碼-->
+	
+	<meta charset="utf-8">
+	<meta http-equiv="imagetoolbar" content="no" 
+<!--網頁表頭-->
+	
+	<title>登入</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css"><!--連接防止修改-->
+<link rel="stylesheet" href="../css/APlayer.min.css" type="text/css">
+<link rel="stylesheet" href="../css/verify.css" type="text/css">
+	
+<!--javascript-->
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+<script type="text/javascript" src="../js/verify.js"></script>
+
+<script src="../js/APlayer.min.js"></script>	
+
+</head>
+	
+<!--内容-->
+	
+<body onload="loadmusic();">
+
+<!--網頁表頭--> 
+	
+	<header>
+	  <div class="top">
+		  <div id="branding">
+						<img  src="../picture/201210041342124030731.png"  height="100" alt="表头图片如果无法显示请下载使用其他浏览器" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+			<nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="zh-cnlogin.html" id="log">登入</a></li>
+						<li><a href="zh-cnrg.html" id="reg_a">注册</a></li>
+					</ul>
+				</div>
+		  </nav>	
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">用户</a></li>
+						<li><a href="#" id="logout">登出</a></li>
+					</ul>
+				</div>
+		  </nav>			
+<!--語言超鏈接-->
+			<nav class="other">
+				<ul>
+					<li><a href="../zh/home.html"	class="zh">繁體</a></li>
+					<li><a href="#"	class="zh-cn">简体</a></li><br>
+					<li><a href="../eg/eghome.html"	class="eg">English</a></li>
+				</ul>		
+			</nav>
+
+		</div>	
+</header>		
+
+<!--导览列-->
+	
+<section>
+  <!--純文字-->
+  <div class="text">
+	<p><a href="zh-cnp.html">纯文字版</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="zh-cnvip.html"><button class="vipbt">个人资料</button></a></li>
+			<li><a href="zh-cnhome.html"><button class="button button1">首页</button></a></li>
+			<li id="open"><a href="zh-cnst.html"><button class="button button2"><span>圣经故事</span></button></a>
+				<div id="list">
+					<ul id="show"><!--定义#show为显示框-->
+					<li><a href="zh-cnst1.html"><button class="button button2a">故事一</button></a></li>
+					<li><a href="zh-cnst2.html"><button class="button button2b">故事二</button></a></li>	
+					<li><a href="zh-cnst3.html"><button class="button button2c">故事三</button></a></li>
+					<!--需要的话可以继续增加其他故事-->
+					</ul>
+				</div>
+			</li>
+				
+			<li><a href="zh-cnstt.html"><button class="button button3">圣经故事测验</button></a></li>
+			<li><a href="zh-cnabu.html"><button class="button button4">关于我们</button></a></li>
+			<li><a href="zh-cnrf.html"><button class="button button5">回应区</button></a></li>
+			<li><a href="zh-cnfm.html"><button class="button button6">讨论区</button></a></li>
+			<li><a href="zh-cnd.html"><button class="button button7">免责声明</button></a></li><br><br><br><br>
+
+			<!--需要的话可以增加-->
+	  	</ul>
+  </div>
+<!--关闭导览列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+  <script>
+	$(".closebutton" ).click(function() {
+	$("#section").hide(1000);
+	$(".closebutton").hide(1000);
+	$(".text").hide(1000);
+	$(".openbutton").show(1000);
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".word").show(1000);
+	$(".photo").show(1000);
+});
+	</script>
+<!--打開导览列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script>
+	$(".openbutton").click(function(){
+	$("#section").show(1000);
+	$(".closebutton").show(1000);
+	$(".text").show(1000);
+	$(".closebutton").show(1000);
+	$(".openbutton").hide(1000);
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+
+}); 
+	</script>
+</section>
+	
+<!--内容框-->
+	<nav class="content">
+<h1 class="imnot">我不是机器人--登入<h1>
+<div id="mpanel2">
+<br>
+</div>
+
+<button type="button" id="check-btn" class="verify-btn" >确定</button>
+
+	<script>
+		$('#mpanel2').codeVerify({
+		type : 1,
+		width : '400px',
+		height : '50px',
+		fontSize : '30px',
+		codeLength : 6,
+		btnId : 'check-btn',
+		ready : function() {
+		},
+		success : function() {
+			$('#check-btn').css("display","none");
+			$('#mpanel2').css("display","none");
+			$('.imnot').css("display","none");
+			$('.loginfm').css("display","block");
+		},
+		error : function() {
+			alert('验证码错误');
+		}
+	});
+	</script>
+<style>
+form{line-height:2em;}
+form>input{
+	padding:5px 10px;border:1px solid #888888;border-radius:5px;margin-right:15px;margin-left:15px;
+}
+form>.ok{
+	color:#008800;
+}
+form>input:valid+.ok{
+	display:inline;
+}
+form>input:invalid+.ok{
+	display:none;
+}
+</style>
+<div class="loginfm" style="display:none">
+	<h3>登入账号</h3>
+	<form onsubmit=window.alert("登入中"),login();>
+		账号：<input id="user" type="text"><br/>
+		密码：<input id="password" type="password" ><br/>
+			<input type="submit" value="送出"/><input type="reset" value="重置"/>
+	</form>
+</div>	
+	</nav>
+<script>
+function login(){
+var a = $.cookie("user1");
+var b = $("#user").val();
+var c = $.cookie("password1");
+var d = $("#password").val();
+if(a==b&&c==d)
+{$.cookie("user", $("#user").val() , { expires : 1 });$.cookie("password", $("#password").val() , { expires : 1 });}
+else
+{window.alert("密码或账号错误/读取cookie错误");}
+};
+</script>
+	<div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+		<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+	
+</html>

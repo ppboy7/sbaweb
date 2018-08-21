@@ -1,0 +1,146 @@
+<!doctype html>
+<!--網站是繁體-->
+<html lang="zh-Hant" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()"><!--禁止複製 右鍵等onpaste="return false;"貼上不限-->
+
+<head>
+
+<!--網站編碼-->
+	
+	<meta charset="utf-8">	
+	<meta http-equiv="imagetoolbar" content="no"> 
+<!--網頁表頭-->
+	
+	<title>即將到來</title>
+	
+<!--連接css-->
+	
+<link href="../css/css.css" rel="stylesheet" type="text/css"><!--連接防止修改-->
+<link rel="stylesheet" href="../css/APlayer.min.css" type="text/css">
+	
+<!--javascript-->
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js.js"></script><!--引入jquery-->
+<script type="text/javascript" src="../js/jquery.cookie.js"></script><!--引入jqcookies插件-->
+<script type="text/javascript" src="../js/js.js"></script><!--連接防止修改-->
+
+<script src="../js/APlayer.min.js"></script>		
+</head>
+
+<!--内容-->
+	
+<body onload="loadmusic();">
+
+<!--網頁表頭--> 
+	<header>
+	    <div class="top">
+		  <div id="branding">
+			<img src="../picture/201210041342124030731.png" height="100" alt="表頭圖片如果無法顯示請下載使用google chrome" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; pointer-events: none;"/>
+						<!--can add thing here-->
+		  </div>
+<!--login-->
+	    <nav class="login">
+				<div id="login">
+					<ul>
+						<li><a href="login.html" id="log">登入</a></li>
+						<li><a href="rg.html" id="reg_a">註冊</a></li>
+					</ul>
+				</div>
+			</nav>	
+	    <nav class="login2">
+				<div id="login2">
+					<ul>
+						<li><a href="#" id="member">用戶</a></li>
+						<li><a href="#" id="logout">登出</a></li>
+					</ul>
+				</div>
+			</nav>			
+<!--語言超鏈接-->
+		  <nav class="other">
+			  <ul>
+				  <li><a href="#"	class="zh">繁體</a></li>
+				  <li><a href="../zh-cn/zh-cnhome.html"	class="zh-cn">简体</a></li><br>
+				  <li><a href="../eg/eghome.html"	class="eg">English</a></li>
+				  <!--可以增加其他語言但要改css調位置-->
+			  </ul>		
+		  </nav>
+
+		</div>	
+	</header>	
+
+<!--導覽列-->
+	
+<section>
+<!--純文字-->
+  <div class="text">
+	<p><a href="p.html">純文字版</a></p>
+  </div>
+<!--真·導覽列-->
+  <div id="section">
+		<ul class="nav_menu">
+			<li class="vip"><a href="vip.html"><button class="vipbt">個人資料</button></a></li>
+			<li><a href="home.html"><button class="button button1">首頁</button></a></li>
+			<li id="open"><a href="st.html"><button class="button button2"><span>聖經故事</span></button></a>
+				<div id="list">
+					<ul id="show"><!--定義#show為顯示框-->
+					<li><a href="st1.html"><button class="button button2a">故事一</button></a></li>
+					<li><a href="st2.html"><button class="button button2b">故事二</button></a></li>	
+					<li><a href="st3.html"><button class="button button2c">故事三</button></a></li>
+					<!--需要的話可以繼續增加其他故事-->
+					</ul>
+				</div>
+			</li>
+				
+			<li><a href="stt.html"><button class="button button3">聖經故事測驗</button></a></li>
+			<li><a href="abu.html"><button class="button button4">關於我們</button></a></li>
+			<li><a href="rf.html"><button class="button button5">回應區</button></a></li>
+			<li><a href="fm.html"><button class="button button6">討論區</button></a></li>
+		  	<li><a href="d.html"><button class="button button7">免責聲明</button></a></li><br><br><br><br>
+
+			<!--需要的話可以增加-->
+	  	</ul>
+	</div>
+<!--關閉導覽列-->
+<div >
+	<p class="closebutton">◀</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".closebutton" ).click(function() {
+	$("#section").hide(1000);
+	$(".closebutton").hide(1000);
+	$(".text").hide(1000);
+	$(".content").addClass("contentbig");
+	$(".content").removeClass("content");
+	$(".openbutton").show(1000);
+});
+	</script>
+<!--打開導覽列-->
+<div >
+	<p class="openbutton">▶</p>
+</div>
+	<script><!--使用jquery的指令$開頭-->
+	$(".openbutton").click(function(){
+	$("#section").show(1000);
+	$(".closebutton").show(100);
+	$(".text").show(1000);
+	$(".contentbig").addClass("content");
+	$(".contentbig").removeClass("contentbig");
+	$(".closebutton").show(1000);
+	$(".openbutton").hide(1000);
+}); 
+	</script>
+</section>
+	
+<!--内容框-->
+	<nav class="content">
+		<p style="font-size:10vw;text-align:center;text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;">即將到來！</p>
+	
+	</nav>
+
+	<div id="aplayer"></div><!--音乐播放器-->
+<script src="../js/music.js" allow="autoplay "></script>
+	<audio class="player" controls loop style="display:none;position:fixed;bottom:0;left:0">
+ 				 <source src="../music/music1.mp3" type="audio/mpeg" >
+ 					Your browser is not supporting,please download the new browser<!--如果不能播放-->
+	</audio>
+</body>
+	
+</html>

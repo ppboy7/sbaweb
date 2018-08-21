@@ -1,0 +1,78 @@
+*{cursor:url(../picture/cursor.ico),auto;}
+.carousel-indicators{
+	cursor:pointer;
+}
+ul,ol,li,div {
+	margin: 0;
+	padding: 0;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+.ft-carousel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/*框*/
+.ft-carousel .carousel-inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+/*框中item*/
+.ft-carousel .carousel-inner .carousel-item {
+	float: left;
+	height: 100%;
+}
+/*img大小*/
+.ft-carousel .carousel-item img {
+	width: 100%;
+	height: 90%;
+}
+/*下面點點css*/
+.ft-carousel .carousel-indicators {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+/*下面點點背景*/
+.ft-carousel .carousel-indicators span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	margin: 0 4px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+/*這裏調下面點點顔色*/
+.ft-carousel .carousel-indicators span.active {
+	background-color: #FF0000	;
+}
+/*調下面點點按下bt*/
+.ft-carousel .carousel-btn {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 45px;
+	margin-top: -25px;
+	cursor: pointer;
+}
+/*返回按鈕*/
+.ft-carousel .carousel-prev-btn {
+	left: 0;
+	background: url(../picture/prev.png) no-repeat;
+}
+/*前進按鈕*/
+.ft-carousel .carousel-next-btn {
+	right: 0;
+	background: url(../picture/next.png) no-repeat;
+}

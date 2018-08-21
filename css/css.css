@@ -1,0 +1,824 @@
+﻿body{
+	cursor:url(../picture/cursor.ico),auto};
+	height:100%;
+/*定義top框*/
+.top{
+	margin: auto;
+	overflow: hidden;
+	background: #00B3FF	
+}
+/*表頭寬100%高100px*/
+header {
+	width: 100%;
+	height: 100px;
+	background:none;
+}
+
+/*語言*/
+nav{
+	width: 50px;
+	height: 50px;
+	background: none;
+	padding-top: 0px;
+	float: left;
+}
+
+/*login超鏈接*/
+header .login a{
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+/*語言超鏈接*/
+header .other a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+header .other{
+	position: absolute;
+	top:25px;
+}
+
+/*表頭language*/
+header ul{
+	margin: 0;
+	padding: 0;
+	width: 80px;
+}
+
+/*language*/
+header li{
+	display: block;   
+	float: left;
+	padding: 0 10px 0 0px;
+}
+
+/*title*/
+header #branding{
+	float: left;
+}
+/*這個忘記了不影響不改留下*/
+header #branding h1{
+	margin: 0;
+}
+/*language框*/
+header nav{
+	float: right;
+	margin-top: 2px;
+	position: absolute;
+	right:30px;
+	padding-top: 28px;
+	top: 40px;
+	z-index: 999;
+	
+}
+
+/*login框位置*/
+header nav #login{
+	position: absolute;
+	width: 80px;
+	top:-45px;
+	display: show;
+}
+
+
+/*login 空格跟下底綫*/
+header nav #login li{
+	padding: 0 5px 0 0px;
+	text-decoration:underline;
+}
+
+/*section跟content的背景圖片*/
+section{
+	width: 100%;
+	height: 100%;
+	display:show;/*多餘的：）*/
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);/*CC0的背景*/
+	
+}
+
+/*section框的狀態*/
+section #section{
+	width: 13%;
+	height: 1000px;
+	display:show;/*多餘的：）*/
+}
+
+/*ul框的大小*/
+section #section ul{
+	width: 150px;
+	height: 668px;
+}
+
+/*把按鈕框上下增加+置頂*/
+section #section ul li{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	z-index: 999;/*置頂*/
+	
+}
+
+/*超鏈接格式*/
+section a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+}
+
+/*ul格式*/
+section ul{
+	margin: 0;
+	padding: 0;
+	
+	
+}
+
+/*按鈕的樣式*/
+section button{
+	width: 150px;
+	height: 60px;
+}
+
+/*聖經故事子框架*/
+section #list{
+	position: absolute;
+	left: 158px;
+	top: 228px;
+	padding-left: 4px;
+	z-index: 1000;
+}
+
+/*ul、li的部分消除·*/
+section ul.nav_menu,ul.nav_menu li{
+	list-style: none;
+}
+
+/*連接部分*/
+section .nav_menu li a{
+	display: block;
+}
+
+/*故事框*/
+section #show {
+	display: none;
+}
+
+/*碰到聖經故事框#show 的框變成block*/
+section #open:hover #show {
+	display: block;
+
+}
+/*純文字框*/
+section .text{
+	text-decoration: overline;
+	text-transform: uppercase;
+	position: absolute;
+	top: 100px;
+}
+/*bt1*/
+.button{
+	transition-duration: 0.02s;/*轉變時間*/
+    text-align: center;
+    text-decoration: none;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+/*bt2 span框*/
+.buttton2 span{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	
+}
+/*》出現*/
+.button2 span:after {
+  content: '>';
+  position: absolute;
+  opacity: 0;
+  top: 20px;
+  left: 105px;
+  transition-duration: 0s;
+	
+}
+/*bt變化*/
+.button2:hover span {
+ 	padding-right: 20px;
+	font-size: 20px;
+	transition-duration: 0.5s;
+}
+/*變化*/
+.button2:hover span:after {
+ 	opacity: 1;
+ 	right: 0;
+}
+/*bt1*/
+.button1{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #F44444;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt1變化*/
+.button1:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #F44444;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #F44444,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt2*/
+.button2{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #FF9922;
+	cursor: default;/*碰到一般*/
+	transition: all 0.5s;
+	border-radius: 10px;
+}
+/*bt2變化*/
+.button2:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #FF9922;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px -2px #FF9922,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt3*/
+.button3{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #FFFF00;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt3變化*/
+.button3:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #FFFF00;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #FFFF00,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt4*/
+.button4{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #00FF00;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt4變化*/
+.button4:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #00FF00;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #00FF00,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt5*/
+.button5{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #00FFFF;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt5變化*/
+.button5:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #00FFFF;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #00FFFF,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt6*/
+.button6{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #0000DD;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt6變化*/
+.button6:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #0000DD;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #0000DD,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt7*/
+.button7{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #A020FF;
+	cursor: pointer;/*碰到變手手*/
+	border-radius: 10px;
+}
+/*bt7變化*/
+.button7:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #A020FF;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #A020FF,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt2子a*/
+.button2a{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+}
+.button2a:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #54ECFF,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt2子b*/
+.button2b{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+}
+.button2b:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #54ECFF,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+}
+/*bt2子c*/
+.button2c{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+}
+.button2c:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #54ECFF;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #54ECFF,0 17px 50px 0 rgba(0,0,0,0.19);/*陰影上面懶得寫了RGB+灰度*/
+	text-decoration:underline;
+}
+/*關閉按鈕*/
+.closebutton{
+	width: 18px;
+	height: 110px;
+	position: absolute;
+	left: 160px;
+	top: 122px;
+	z-index: 999;
+	background-color: white; 
+    color: black; 
+	cursor: pointer;/*碰到變手手*/
+	display: block;
+}
+/*關閉按鈕動畫*/
+.closebutton:hover{
+	background-color: white; 
+    color: black; 
+	cursor: pointer;/*碰到變手手*/
+}
+/*展開按鈕*/
+.openbutton{
+	width: 18px;
+	height: 110px;
+	position: absolute;
+	left: 0px;
+	top: 122px;
+	z-index: 999;/*最上層*/
+	background-color: white; 
+    color: black; 
+	cursor: pointer;/*碰到變手手*/
+	display: none;
+}
+/*内容框*/
+nav.content{
+	position: absolute;
+	top:100px;
+	left: 180px;
+	width: 86.6%;
+	height: 1000px;
+	min-width: 1000px;
+}
+/*内容框最大化*/
+nav.contentbig{
+	position: absolute;
+	top: 100px;
+	left: 1.5%;
+	width: 97.5%;
+	height: 1000px;
+}
+/*控制個人資料的框框顯示*/
+.vip{
+	display:none;
+}
+/*vipbt的屬性*/
+.vipbt{
+	background-color: white; 
+    color: black; 
+    border: 2px solid #C0C0C0;
+	cursor: pointer;/*碰到變手手*/
+}
+/*vipbt的動畫*/
+.vipbt:hover{
+	background-color: white; 
+    color: black; 
+    border: 4px solid #C0C0C0;
+	cursor: pointer;/*碰到變手手*/
+	box-shadow: 4px 8px 8px 2px #C0C0C0,0 17px 50px 0 rgba(0,0,0,0.19);
+	text-decoration:underline;
+	transition-duration: 0.5s;
+}
+/*user logout*/
+header nav #login2{
+	position: absolute;
+	width: 80px;
+	top:-45px;
+	display: none;
+}
+/*user logout位置*/
+header nav #login2 li{
+	padding: 0 5px 0 0px;
+	text-decoration:underline;
+}
+/*user logout超鏈接*/
+header .login2 a{
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*框變大小*/
+nav .sm{
+	font-size:2vw;
+	text-align:center;
+	background-color: none;
+    color: black;
+}
+/*框變大小*/
+nav .bg{
+	position: absolute;
+	top:-4%;
+	font-size:4vw;
+	text-align:center;
+	background-color: none;
+    color: black;
+	
+}
+/*不用預設*/
+nav #ulst{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/*a字的大小*/
+nav #smbt{
+	position: absolute;
+	left: 0.5%;
+	top:5%;
+	font-size:2vw;
+	z-index: 999;
+}
+/*a字的大小*/
+nav #bgbt{
+	position: absolute;
+	left: 3%;
+	top:2.5%;
+	font-size:4vw;
+	z-index: 999;
+}
+/*超鏈接*/
+nav a{
+	text-transform: uppercase;
+	cursor: pointer;
+}
+/*故事框*/
+.st{
+	position:absolute;
+	left:0px;
+	width: 80%;
+	height: 100%;
+}
+/*文字框*/	
+.word{
+	position:fixed;
+	bottom:295px;
+	right:0;
+	margin:0;
+	z-index:99;
+	overflow:visible;
+	max-width:400px;
+	box-shadow:none;
+	width: 300px;
+}
+/*圖片框*/
+.photo{
+	position:fixed;
+	bottom:0;
+	right:0;
+	margin:0;
+	z-index:99;
+	overflow:visible;
+	max-width:400px;
+	box-shadow:none;
+	width: 300px;
+	height: 300px;
+}
+#tp{
+	cursor:url(../picture/cursor.ico),auto;
+}
+p{
+	cursor:url(../picture/cursor.ico),auto;
+}
+iframe{
+	cursor:url(../picture/cursor.ico),auto;
+}
+audio{
+	z-index:999999;
+}
+video{
+	cursor:url(../picture/cursor.ico),auto;
+}
+.abu{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position:absolute;
+	left:0px;		
+}
+.map{
+	position:absolute;
+	top:270px;
+}
+.tpbt1{background-color: white; 
+    color: black;font-size:25px ;border-radius: 8px; }
+.tpbt2{background-color: white; 
+    color: black;font-size:25px;border-radius: 8px;}
+.tpbt3{background-color: white; 
+    color: black;font-size:25px ;border-radius: 8px;}
+.tpbt4{background-color: white; 
+color: black;font-size:25px ;border-radius: 8px;}
+.link a{
+	text-decoration:none;
+	text-transform: lowercase;
+	color:blue;
+}
+.link a:visited {
+	text-decoration:none;
+	text-transform: lowercase;
+	color:blue;
+}
+.link a:hover {
+text-decoration:underline;
+}
+.frame{
+	position:absolute;
+	width:100%;
+	right:10px;
+	height:2800px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);/*CC0的背景*/
+	
+}
+.frame1{
+	position:absolute;
+	width:100%;
+	right:10px;
+	height:2000px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);/*CC0的背景*/
+	
+}
+.frame2{
+	position:absolute;
+	width:100%;
+	right:10px;
+	height:37050px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);/*CC0的背景*/
+	
+}
+.frame3{
+	position:absolute;
+	width:100%;
+	right:10px;
+	height:27500px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);/*CC0的背景*/
+	
+}
+.fmf{
+	border: 2px solid black;
+    border-radius: 8px;
+	width:700px;
+	height:215px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.fmf1{
+	border: 4px solid transparent;
+	border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+	border-image-slice: 1;
+	width:700px;
+	height:215px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.inputfmf{
+	border: 2px solid red;
+    border-radius: 8px;
+	width:700px;
+	height:255px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.fmname{
+	position:relative;
+	top:15px;
+	left:10px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.inputfmname{
+	position:relative;
+	top:20px;
+	overflow:hidden;
+	left:10px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.fmtxt{
+	position:relative;
+	top:10px;
+	left:10px;
+	height:150px;
+	width:680px;
+	border: 1px solid black;
+    border-radius: 8px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.fmtxt1{
+	position:relative;
+	top:10px;
+	left:10px;
+	height:150px;
+	width:680px;
+	border: 2px solid transparent;
+	border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+	border-image-slice: 1;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.inputtxt{
+	position:relative;
+	top:40px;
+	left:10px;
+    border-radius: 8px;
+	overflow:hidden;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.nametag{
+	position:relative;
+	top:20px;
+	left:10px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.inputbt{
+	position:relative;
+	top:43px;
+	left:645px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.resetbt{
+	position:relative;
+	top:43px;
+	left:540px;
+	background: url(http://s3.amazonaws.com/caself/products/photos/000/001/309/original/geometry2.png?1508596168);
+}
+.admin{
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+	color:rgb(255, 0, 0);opacity:0.6;
+}
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 6s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 6s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 6s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: #A020FF;}	
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: #00FF00;}
+	100%{color: #00FFFF;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: #A020FF;}	
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: #00FF00;}
+	100%{color: #00FFFF;}
+	100%{color: orange;}	
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: #A020FF;}	
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: #00FF00;}
+	100%{color: #00FFFF;}
+	100%{color: orange;}
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+#myBtn1 {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn1:hover {
+  background-color: #555;
+}
+.stbt{
+	background-color: white; 
+    color: black;
+	width:80%;
+	height:150px;
+	font-size:40px;
+	margin-left:50px;
+	border-radius: 80px;
+	box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.10),0 8px 4px 0 rgba(0,0,0,0.19);
+}
+.stbt:hover{
+	background-color: white; 
+    color: black; 
+	cursor: pointer;/*碰到變手手*/
+	text-decoration:underline;
+	box-shadow: 0px 8px 0px 0px rgba(0,0,88,0.40),0 8px 4px 0 rgba(0,0,0,0.19);
+}
+.rgfm{
+	cursor: default;
+}

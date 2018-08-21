@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+	cursor:url(../picture/cursor.ico),auto;
+}
+#timeLine{
+    width: 1000px;
+    margin: 100px auto;
+    /*border:  solid 1px #434343;*/
+    background: rgba(255,255,255,0.8);/*這裏改綫的rgba*/
+    overflow: hidden;
+}
+/*標題天數*/
+#yearList{
+    width: 100%;
+    list-style: none;
+    position: relative;
+    left: 0px;
+    margin-left: 457px;/*右移*/
+}
+#yearList:after,.container-li:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*標題css文字*/
+#yearList li{
+    float: left;
+    text-align: center;
+    font-size: 21px;
+    padding: 10px 20px;
+	cursor:url(../picture/cursor.ico),auto;
+}
+/*點*/
+.year-dot{
+    width: 10px; height: 10px; border-radius: 5px;
+    background-color: #002f21;
+    margin: 10px auto;
+    display: block;
+}
+/*綫*/
+.dotted-line{
+    border-bottom: dashed 2px  #7b7d7b;
+    position: relative;
+    top: -26px;
+    z-index: -1;
+}
+#cList{
+    width: 100%;
+    position: relative;
+}
+/*btnLeft*/
+#btnLeft{
+    width: 50px; height: 130px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 270px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 120px;
+    background: rgba(0,0,0,0.3);
+}
+/*btnRight*/
+#btnRight{
+    width: 50px; height: 130px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 270px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 120px;
+    background: rgba(0,0,0,0.3);
+}
+#btnLeft:hover,#btnRight:hover{
+    background: rgba(0,0,0,0.5);
+}
+#cUl{
+    width: 850px;
+    list-style: none;
+    height: 620px;
+    margin: 0 auto;
+    position: relative;
+    left: 0px;
+}
+#cUl li{
+    width: 850px;
+  position: absolute;  left: 0;
+}
+.li-tit{
+    display:inline-block;
+    color: #fff;
+    background-color: #002f21;
+    padding: 10px 20px;
+    margin: 30px auto 10px;
+	cursor:url(../picture/cursor.ico),auto;
+}
+/*内容框*/
+.container-li{
+    width: 100%;
+    padding: 20px 0px 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid 1px #434343;
+}
+}
+.year-active{
+    color: red;
+}
+.year-active i{
+    background-color: red;
+}
+
+

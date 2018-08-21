@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>即將跳轉</title>
+<script language="javascript" type="text/javascript">
+window.onload=function()
+{
+document.getElementById('jscheck').style.display='none';/*使用js改變css如果用不了=js不能用*/
+document.getElementById('normalcontent').style.display='';/*使用js改變css*/
+	
+/*cookieEnabled 属性可返回一个布尔值，如果浏览器启用了 cookie，该属性值为 true。如果禁用了 cookie，则值为 false。*/	
+/*確認是否啓用cookie*/
+if(!(document.cookie || navigator.cookieEnabled))
+{
+alert('cookie error!');
+}
+};
+/*嘗試寫入cookie再讀取測試*/
+document.cookie="testcookie";	
+if (document.cookie.length <= 0){
+	alert(" 偵測到cookie無法使用 讀取cookie出現錯誤！！\n 侦测到cookie无法使用 读取cookie出现错误！！\n Detected that the cookie could not be used Reading the cookie has an error! !");
+	alert(" 缺乏cookie功能會導致網站部分内容不能展示 \n 缺乏cookie功能会导致网站部分内容不能展示 \n The lack of cookies can cause part of the site to not be displayed.");
+};/*如果無法讀取cookiealert*/
+/*測試是否手機*/
+function isMobile() {
+
+  try{ document.createEvent("TouchEvent"); return true; }
+
+  catch(e){ return false;}
+
+};
+	if(isMobile()){
+		alert("使用觸式屏幕可能導致版面出現問題\n使用触式屏幕可能导致版面出现问题\nUsing touch screen may cause problems with the layout");
+	};
+
+if(window.localStorage){console.log("localStorage-test-pass");
+	}else{alert("aplayer無法啓用使用其他瀏覽器可以得到跟好的體驗\naplayer无法啓用使用其他浏览器可以得到跟好的体验\nAplayer can't be enabled to use other browsers to get a good experience");console.log("localStorage-test-fail");
+	};
+</script>
+</head>
+ <!--内容框-->
+<body oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" ＆#111nmouseup="document.selection.empty()">
+	
+<!--非隱藏内容框-->	
+<div id="jscheck"  style="color:black; text-align:center；">您的浏览器禁止了脚本运行，请确认浏览器允许脚本运行<br>您的瀏覽器禁止了腳本運行，請確認瀏覽器允許腳本運行<br>
+Your browser is forbidden to run the script. Please make sure the browser allows the script to run.</div>
+
+<!--java啓用内容框-->	
+<div id="normalcontent" style="display:none;"><form name="loading">
+<!--表頭-->	
+<p align="center"> <font color="#0066ff" size="2">正在進入，請稍等...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp正在进入，请稍等...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Entering, please wait...<br></font>
+<!--load條-->	
+<input type="text" name="chart" size="46" style="font-family:Arial; font-weight:bolder; color:#black; background-color:none; padding:0px; border-style:none;">
+<!--%-->
+<input type="text" name="percent" size="47" style="color:black; text-align:center; border-width:medium; border-style:none;">
+<!--寫入js 進度條-->	
+<script>
+var bar=0
+var line="||"
+var amount="||"
+count()
+function count(){
+bar=bar+2
+amount =amount + line
+document.loading.chart.value=amount
+document.loading.percent.value=bar+"%"
+if (bar<99)
+{setTimeout("count()",47);}/*調速度*/
+else
+{window.location = "zh/home.html";}/*跳轉網站*/
+}</script>
+</p>
+</form>
+<p align="center"> 如果無法跳轉,<a style="text-decoration: none" href="zh/home.html"><font color="#FF0000">請點這裡</font></a>.</p>
+<p align="center"> 如果无法跳转,<a style="text-decoration: none" href="zh-cn/zh-cnhome.html"><font color="#FF0000">请点这裡</font></a>.</p>
+<p align="center">If you can't jump,<a style="text-decoration: none" href="eg/eghome.html"><font color="#FF0000">please click here</font></a>.</p>
+
+<!--調用現在時間-->
+<script LANGUAGE="JavaScript">
+var start=new Date();
+start=Date.parse(start)/1000;
+var counts=3;
+function CountDown(){
+var now=new Date();
+now=Date.parse(now)/1000;
+var x=parseInt(counts-(now-start),10);
+if(document.form1){document.form1.clock.value = x;}
+if(x > 0){
+timerID=setTimeout("CountDown()", 60)
+}else{
+location.href="zh/home.html"
+}
+}
+
+</script>
+<script LANGUAGE="JavaScript">
+
+window.setTimeout('CountDown()',100);
+
+</script>
+<form NAME="form1"  style="color:black; text-align:center">
+<input TYPE="text" NAME="clock" SIZE="5" VALUE="3">
+
+</form></div>
+
+</body>
+ 
+</html>
